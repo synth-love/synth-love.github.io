@@ -4,7 +4,7 @@ title: Synthesizers by Jordan and Friends
 description: "We love synthesizers, and we love freedom. Here's some free and open source music synthesis stuff in the LV2 standard."
 baseurl: ""
 url: "http://www.synth.love"
-twitter_username: jekyllrb
+# twitter_username: jekyllrb
 github_username:  jordanhalase
 
 # Build settings
