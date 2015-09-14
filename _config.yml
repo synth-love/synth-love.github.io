@@ -1,7 +1,7 @@
 # Site settings
-title: Lovely Synthesizers by Jordan and Friends
+title: Lovely, Lovely Synthesizers~
 # email: your-email@domain.com
-description: "We love synthesizers, and we love freedom. Here's some free and open source music synthesis stuff in the LV2 standard."
+description: "We love synthesizers, and we love freedom. Here's some free and open source music synthesis stuff written in the open LV2 standard."
 baseurl: ""
 url: "http://www.synth.love"
 # twitter_username: jekyllrb

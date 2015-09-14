@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Greetings, everyone. My name is Jordan Halase. I am an undergraduate student majoring in Computer Engineering and minoring in Japanese language. I also have an interest in DSP programming and computer music, so naturally, I would be the kind of person to write digital synthesizers.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I like to work with [audio plugins](https://en.wikipedia.org/wiki/Audio_plug-in) when I program. The architecture I chose for this is [LV2](http://www.lv2plug.in/) because of how clean and extensible it is, along with it being [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software).
