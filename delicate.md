@@ -32,6 +32,6 @@ However, it still needs work before I am ready to upload it.
 
 Here is an image of it working in Ardour.
 
-![Whoa man I really wish you could see this!](http://i.imgur.com/nnBSmNG.png){:width="800px" height="auto"}
+<img src="http://i.imgur.com/nnBSmNG.png" width="800px" height="auto" />
 
 -Jordan Halase
