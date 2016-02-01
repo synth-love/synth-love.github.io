@@ -34,18 +34,36 @@ Although, like a coin, there are three sides to this equation. In order to prope
 
 * Arbitrary inputs and outputs
 
-Traditional plugin APIs offer some floating point inputs and outputs. They may support MIDI and sometimes side-chain inputs. The first thing that struck me as very useful with LV2 was the ability for plugins to have any number of inputs and outputs. This allows for powerful modular style plugin linking and expressive utilities. It's even possible to make advanced configurations, and save that as a single preset entity that can be loaded into a traditional linear-style effect chain.
+Traditional plugin APIs offer some floating point inputs and outputs. They may support MIDI and sometimes side-chain inputs. The first thing that struck me as very useful with LV2 was the ability for plugins to have any number of inputs and outputs. This allows for powerful modular style plugin linking and expressive utilities. It's even possible to make advanced configurations, and save that as a single preset entity that can be loaded into a DAW that only supports traditional linear-style effect chains.
 
 * Extensibility for free
 
 Port types are not restricted to audio or midi. They can send and recieve *any* kind of message to one another that they want, and the host doesn't even need to implement nor understand what those messages are. Plugins that understand a type can be plugged into and control one another. An example could be an "arpeggiator" plugin that sends arpeggiated midi, as well as altering the other plugin's envelope and pitch data.
 
-* You no longer have to hate a plugin because of its GUI.
+* You no longer have to hate a plugin because of its GUI (or lack of)
 
 LV2 maintains a strong separation of plugins and the UIs that operate on them. GUIs for LV2 plugins are typically in a separate binary, and sometimes in a separate project altogether. It's even possible for "fanmade" GUIs for certain plugins to exist.
 
+* Plugins without GUIs don't feel primitive or shoddy
+
+LV2 allows plugins to communicate data about their parameters. Not only can a plugin tell a host that its parameters are displayed as "dB" or "Hz", but can also give information about what that port *does* or what that port *is*. It can be logarithmic, so equalizers don't feel incredibly touchy. It can be a trigger, so the host can render it as a button instead of a slider. It can warn the host that modulating it causes artifacts, or that modulating it can cause a spike in CPU. It can also give general patching information so the host or other plugins can manipulate it easier, like with the arpeggiator example earlier. The host can also load the plugin in an "effect chain" environment and not be confused if the plugin has a lot of ports.
+
+Again, this functionality also allows "fanmade" GUIs to be made, if you so desire.
+
 ## As a plugin developer
 
+* Flexibility to add functionality without being at mercy to the host
 
+
+
+## As a host developer
+
+* No need to define your own "internal" plugin API from scratch
+
+Plenty of DAWs have their own specific instrument or effects suite to communicate special information from the host that isn't possible with traditional plugin APIs. LV2 plugins can send *anything* to and from one another including the host itself. This can also allow developers to make their own LV2 plugins that integrate very well and intimately with your host. Of course, this is easier to do if you're programming a fresh host from the ground up.
+
+* Embedded applications possible
+
+Because LV2 enforces a strong separation between DSP and UI, it is possible to embed only the DSP part of a plugin. This, along with its permissive license, allows LV2 to touch on new and interesting domains. An example could be a video game engine that uses LV2 plugins for audio effects or synthesis. A real world example is the [Mod Duo](http://moddevices.com/), which is a universal hardware guitar pedal that loads LV2 plugins. They also define their own LV2 extension that allows editing patches through a web browser.
 
 -Jordan Halase
