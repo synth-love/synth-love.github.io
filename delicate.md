@@ -2,6 +2,7 @@
 layout: page
 title: Delicate Synth
 permalink: /delicate/
+comments: true
 ---
 
 Coming Soon~
