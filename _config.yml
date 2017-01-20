@@ -9,4 +9,6 @@ github_username:  jordanhalase
 
 # Build settings
 markdown: kramdown
+kramdown:
+        extensions: ["footnotes"]
 permalink: pretty
